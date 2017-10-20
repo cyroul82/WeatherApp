@@ -6,7 +6,7 @@ const argv =  yargs
   .options({
     a: {
       demands: true,
-      alias: 'address',
+      alias: 'addr',
       description: 'Address to fetch weather for',
       string: true
     }
@@ -14,7 +14,7 @@ const argv =  yargs
   .help().alias('help', 'h')
   .argv;
 
-geocode.geocodeAddress(argv.address, (errorMessage, results) => {
+geocode.geocodeAddress(argv.addr, (errorMessage, results) => {
   if(errorMessage){
     console.log(errorMessage);
   }
